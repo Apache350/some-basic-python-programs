@@ -1,0 +1,28 @@
+{% extends 'programs/parent.html' %}
+{% block title%}myy clg program{% endblock title%}
+{% block heading%}<center>1.-check number is prime or not</center>n=int(input("enter the value of n"))<br>
+    if n==1:
+<pre>        print("1 is not a prime number")
+elif n>1:
+    <pre>         for i in range(2,n):</pre> 
+    <pre>                   c=n%i</pre> 
+    <pre>                   if c==0:</pre> 
+    <pre>                        print("not prime")</pre> 
+    <pre>                        break</pre> 
+    <pre>         else: </pre> 
+    <pre>                               print("prime")  </pre> 
+else:
+<pre>        print(n,"is not a prime number") </pre> <br><br>{% endblock heading%}
+
+        {% block btn %}
+        <a href="{% url 'odd even' %}" class="btn btn-success">check number is even or odd</a><br><br>
+        <a href="{% url 'N prime'%}" class="btn btn-success"> print first N prime numbers</a><br><br>
+        <a href="{% url 'factor'%}" class="btn btn-success">print factors of a number</a><br><br>
+        <a href="{% url 'gcd'%}" class="btn btn-success">print greatest common divisor</a><br><br>
+        <a href="{% url 'lcm'%}" class="btn btn-success">print lowest common multiple</a><br><br>
+        <a href="{% url 'eucline'%}" class="btn btn-success">Eucline distance between two points</a><br><br>
+        <a href="{% url 'dictionary'%}" class="btn btn-success">some basic programs of dictionary</a><br><br>
+        <a href="{% url 'list'%}" class="btn btn-success">some basic programs of list</a><br><br>
+        {% endblock btn%}
+        
+         

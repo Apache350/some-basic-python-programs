@@ -1,0 +1,31 @@
+{% extends 'programs/parent.html' %}
+{% block title%}myy clg program{% endblock title%}
+{% block heading%} <center><b>1.- factors of a numbers</b></center>n=int(input("enter the value of n"))<br>
+if n==1:<br>
+    <pre>    print("1") </pre><br>
+elif n>0:<br>
+    <pre>    for i in range(1,n+1):</pre>
+        <pre>        c=n%i</pre>
+        <pre>        if c==0: </pre>
+           <pre>             print(i-c)</pre>
+elif n<0:<br>
+    <pre>      for i in range(1,-n+1):</pre>
+        <pre>          c=-n%i</pre>
+        <pre>          if c==0:</pre>
+            <pre>              print(-i)</pre>
+else:
+<pre>    print(n,"is not defined")</pre><br>
+
+
+            {% endblock heading%}
+
+            {% block btn %}
+            <a href="{% url 'prime' %}" class="btn btn-success">check number is prime or not</a><br><br>
+            <a href="{% url 'N prime'%}" class="btn btn-success"> print first N prime numbers</a><br><br>
+            <a href="{% url 'odd even'%}" class="btn btn-success">check number is even or odd</a><br><br>
+            <a href="{% url 'gcd'%}" class="btn btn-success">print greatest common divisor</a><br><br>
+            <a href="{% url 'lcm'%}" class="btn btn-success">print lowest common multiple</a><br><br>
+            <a href="{% url 'eucline'%}" class="btn btn-success">Eucline distance between two points</a><br><br>
+            <a href="{% url 'dictionary'%}" class="btn btn-success">some basic programs of dictionary</a><br><br>
+            <a href="{% url 'list'%}" class="btn btn-success">some basic programs of list</a><br><br>
+            {% endblock btn%}
